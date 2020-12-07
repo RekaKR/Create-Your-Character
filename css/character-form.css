@@ -32,6 +32,8 @@ button,
 
 body {
   height: 100vh;
+  background-image: url(../img/background.jpg);
+  background-color: #000000;
 }
 
 main {
@@ -47,12 +49,21 @@ main .ch-sheet {
   height: 500px;
   margin: auto 2.5rem auto 0;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 main .ch-sheet img {
   width: 300px;
   display: block;
   margin: 0 auto;
+}
+main .ch-sheet .text {
+  min-width: 600px;
+  max-width: 48%;
+  height: 25%;
+  border: 1px solid white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 main form {
   min-width: 600px;
@@ -60,7 +71,7 @@ main form {
   height: 500px;
   margin: auto 0 auto 2.5rem;
   padding: 2rem;
-  border: 1px solid black;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

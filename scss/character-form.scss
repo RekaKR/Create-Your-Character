@@ -1,7 +1,10 @@
 @use 'reset';
+@use 'variables';
 
 body {
   height: 100vh;
+  background-image: url(../img/background.jpg);
+  background-color: variables.$background-color;
 }
 
 main {
@@ -17,12 +20,22 @@ transform: translate(-50%, -50%);
     height: 500px;
     margin: auto 2.5rem auto 0;
     padding: 10px;
-    border: 1px solid black;
+    border: variables.$border;
 
     img {
       width: 300px;
       display: block;
       margin: 0 auto;
+    }
+
+    .text {
+      min-width: 600px;
+      max-width: 48%;
+      height: 25%;  
+      border: variables.$border;
+      position: fixed;
+      bottom: 0;
+      left: 0;
     }
   }
 
@@ -32,7 +45,7 @@ transform: translate(-50%, -50%);
     height: 500px;
     margin: auto 0 auto 2.5rem;
     padding: 2rem;
-    border: 1px solid black;
+    border: variables.$border;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
