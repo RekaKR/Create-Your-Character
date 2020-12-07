@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/character-form.css">
+  <script src="./js/character-form.js"></script>
+  <title>Create a character | GAME</title>
+</head>
+
+<body>
+  <main>
+    <div class="ch-sheet">
+      <img src="../img/[CITYPNG.COM]HD White Among Us Character PNG - 1599x1600.png" alt="">
+      <div class="text">
+        <p id="ch-race"></p>
+        <p id="ch-gender"></p>
+        <p id="ch-class"></p>
+      </div>
+    </div>
+    <form action="">
+      <!--character-name-->
+      <input type="text" name="name" id="name">
+
+      <!--race-->
+      <select name="" id="" size=”1” required>
+        <option value="class1" selected>PLEASE CHOOSE RACE*</option>
+        <option value="race1">White</option>
+        <option value="race2">Red</option>
+        <option value="race3">Yellow</option>
+        <option value="race4">RACE4</option>
+      </select>
+
+      <!--gender-->
+      <select name="" id="" size=”1”>
+        <option value="class1" selected>PLEASE CHOOSE GENDER</option>
+        <option value="gender1">Female</option>
+        <option value="gender2">Male</option>
+      </select>
+
+      <!--class-->
+      <select name="" id="" size=”1” required>
+        <option value="class1" selected>PLEASE CHOOSE CLASS*</option>
+        <option value="class1">Police Captain</option>
+        <option value="class2">Innocent</option>
+        <option value="class3">Noob</option>
+      </select>
+
+      <!--
+    <input type="hidden" id="custId" name="custId" value="1">
+    -->
+      <!--
+    <label for="vol">ERŐSSÉG (between 0 and 10):</label>
+    <input type="range" id="XYXYXYXY" name="vol" min="0" max="10">
+    -->
+
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+
+</html>
+
+
+<!--
+Whenever an input changes, the character sheet next to the form will fill up with the change.
+When we change the name or a dropdown menu value, the value shows up next to the form in a character sheet
+For the gender, the race and class, the value is represented with an icon or an image
+-->

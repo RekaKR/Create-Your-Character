@@ -1,0 +1,47 @@
+@use 'reset';
+
+body {
+  height: 100vh;
+}
+
+main {
+display: flex;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+  .ch-sheet {
+    min-width: 600px;
+    max-width: 48%;
+    height: 500px;
+    margin: auto 2.5rem auto 0;
+    padding: 10px;
+    border: 1px solid black;
+
+    img {
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  form {
+    min-width: 600px;
+    max-width: 48%;
+    height: 500px;
+    margin: auto 0 auto 2.5rem;
+    padding: 2rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    input,
+    select {
+      width: 50%;
+    }
+  }
+}
+
