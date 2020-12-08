@@ -7,12 +7,18 @@ body {
   background-color: variables.$background-color;
 }
 
+.main-sign {
+  max-height: 28%;
+  margin: -10px auto;
+  display: block;
+}
+
 main {
 display: flex;
 position: fixed;
 top: 50%;
 left: 50%;
-transform: translate(-50%, -50%);
+transform: translate(-50%, -30%);
 
   .ch-sheet {
     min-width: 600px;
@@ -54,8 +60,15 @@ transform: translate(-50%, -50%);
     align-items: center;
 
     input,
-    select {
+    select,
+    button {
       width: 50%;
+      height: 10%;
+      color: variables.$tecxt-color;
+      padding: 0 10px;
+      border: variables.$border;
+      border-radius: variables.$border-radius;
+      text-transform: uppercase;
     }
   }
 }
