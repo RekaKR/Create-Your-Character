@@ -64,11 +64,32 @@ transform: translate(-50%, -30%);
     button {
       width: 50%;
       height: 10%;
-      color: variables.$tecxt-color;
+      color: variables.$text-color;
       padding: 0 10px;
       border: variables.$border;
       border-radius: variables.$border-radius;
       text-transform: uppercase;
+    }
+
+    select {
+      color: variables.$text-color;
+      background-color: black;
+
+      #pink {
+        color: rgb(223, 22, 139);
+      }
+      
+      #red {
+        color: rgb(255, 0, 0);
+      }
+
+      #orange {
+        color: rgb(255, 69, 0);
+      }
+
+      #yellow {
+        color: rgb(255, 255, 0);
+      }
     }
   }
 }

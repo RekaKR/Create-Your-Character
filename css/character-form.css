@@ -97,5 +97,21 @@ main form button {
   border-radius: 20px;
   text-transform: uppercase;
 }
+main form select {
+  color: #fff;
+  background-color: black;
+}
+main form select #pink {
+  color: #df168b;
+}
+main form select #red {
+  color: red;
+}
+main form select #orange {
+  color: orangered;
+}
+main form select #yellow {
+  color: yellow;
+}
 
 /*# sourceMappingURL=character-form.css.map */
