@@ -1,7 +1,14 @@
-/*
-document.getElementById("#id").addEventListener('esemény', function());
+function pageLoad () {
 
-let krumpli = function() {}
-*/
 
-/*window.addEventListener('load', hckhbk)*/
+  
+
+  /*
+  document.getElementById("#id").addEventListener('esemény', function());
+  */
+
+
+}
+
+
+window.addEventListener('load', pageLoad)
