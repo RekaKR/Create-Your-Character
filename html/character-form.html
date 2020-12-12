@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../img/red-among-us-noob.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/character-form.css">
-  <script src="./js/character-form.js" defer></script>
+  <script src="../js/character-form.js" defer></script>
   <title>Create a character | GAME</title>
 </head>
 
@@ -15,16 +15,13 @@
   <main>
     <div class="ch-sheet">
       <img src="../img/red-among-us-noob.png" alt="Red character noob">
-      <div class="text">
-        <p id="ch-race"></p>
-        <p id="ch-gender"></p>
-        <p id="ch-class"></p>
+      <div id="text">
       </div>
     </div>
     <div class="container">
       <form action="">
         <!--character name-->
-        <input type="text" name="name" id="name" placeholder="Name *" required>
+        <input id="ch-name" type="text" name="name" placeholder="Name *" required>
 
         <!--race-->
         <select name="race" id="race-select" size=”1” required>
@@ -59,7 +56,7 @@
     <input type="range" id="XYXYXYXY" name="vol" min="0" max="10">
     -->
 
-        <input type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit">
       </form>
     </div>
   </main>

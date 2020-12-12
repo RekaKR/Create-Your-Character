@@ -1,52 +1,73 @@
 function pageLoad () {
-
-  //character name
-  let nameSelect = document.getElementById("name-select");
   
-  //race
+  //content variable
+  let text = document.getElementById("text");
+
+  //ch name variable
+  let chName = document.getElementById("ch-name");  
+
+  //race variable
   let raceSelect = document.getElementById("race-select");
-  let raceSelectValue = raceSelect.options[recaSelect.selectedIndex].value;
+  let raceSelectValue = raceSelect.options[raceSelect.selectedIndex].value;
   let raceSelectText = raceSelect.options[raceSelect.selectedIndex].text;
-  
-  /*
-  let raceChoose = document.getElementById("race-choose");
-  let pink = document.getElementById("pink");
-  let red = document.getElementById("red");
-  let orange = document.getElementById("orange");
-  let yellow = document.getElementById("yellow");
-  let white = document.getElementById("white");
-  */
 
-  //gender
+  //gender variable
   let genderSelect = document.getElementById("gender-select");
-  let genderSelectValue = raceSelect.options[genderSelect.selectedIndex].value;
-  let genderSelectText = raceSelect.options[genderSelect.selectedIndex].text;
-  
-  /*
-  let genderChoose = document.getElementById("gender-choose");
-  let female = document.getElementById("female");
-  let male = document.getElementById("male");
-  */
+  let genderSelectValue = genderSelect.options[genderSelect.selectedIndex].value;
+  let genderSelectText = genderSelect.options[genderSelect.selectedIndex].text;
 
-  //class
+  //class variable
   let classSelect = document.getElementById("class-select");
-  let classSelectValue = raceSelect.options[classSelect.selectedIndex].value;
-  let classSelectText = raceSelect.options[classSelect.selectedIndex].text;
+  let classSelectValue = classSelect.options[classSelect.selectedIndex].value;
+  let classSelectText = classSelect.options[classSelect.selectedIndex].text;
   
+  //submit variable
+  let submit = document.getElementById('submit');
+
+
+  //ch name func.
+  function showChName() {
   /*
-  let classChoose = document.getElementById("class-choose");
-  let fighter = document.getElementById("fighter");
-  let noob = document.getElementById("noob");
-  let innocent = document.getElementById("innocent");
+    text.insertAdjacentHTML('afterbegin', `
+    <p>${chName.value}</p>
+    `);
   */
+    text.innerHTML = `<p>${chName.value}</p>`;
+    //text.textContent = chName.value;
+  }
   
+  //race func.
+  function racePrint() {
+    text.insertAdjacentHTML('beforeend', `
+      <p>${raceSelectText}</p>
+      <p>${raceSelectValue}</p>
+    `);
+  }
 
-  /*
-  document.getElementById("#id").addEventListener('esemény', function());
-  */
+  //gender func.
+  function genderPrint() {
+    text.insertAdjacentHTML('beforeend', `
+      <p>${genderSelectText}</p>
+      <p>${genderSelectValue}</p>
+    `);
+  }
 
+  //class func.
+  function classPrint() {
+    text.insertAdjacentHTML('beforeend', `
+      <p>${classSelectText}</p>
+      <p>${classSelectValue}</p>
+    `);
+  }
 
+  //ch name invite
+  chName.addEventListener('input', showChName);
+  //race invite
+  raceSelect.addEventListener('change', racePrint);
+  //gender invite
+  genderSelect.addEventListener('change', genderPrint);
+  //class invite
+  classSelect.addEventListener('change', classPrint);
 }
 
-
-window.addEventListener('load', pageLoad)
+window.addEventListener('load', pageLoad);

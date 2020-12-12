@@ -34,8 +34,8 @@ transform: translate(-50%, -30%);
       display: block;
       margin: 0 auto;
     }
-
-    .text {
+    
+    #text {
       min-width: 600px;
       max-width: 48%;
       height: 25%;  
@@ -43,6 +43,12 @@ transform: translate(-50%, -30%);
       position: fixed;
       bottom: 0;
       left: 0;
+      
+      p {
+        color: variables.$text-color;
+        margin-top: 7px;
+        text-align: center;
+      }
     }
   }
 
