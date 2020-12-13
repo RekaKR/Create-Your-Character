@@ -6,7 +6,7 @@ function pageLoad() {
   `);
 
 
-  //text bar
+  //ch text bar
   let text = document.getElementById("text");
 
   for (let i = 0; i < 4; i++) {
@@ -16,6 +16,10 @@ function pageLoad() {
   let divs = text.querySelectorAll("div");
 
 
+  //ch img
+  text.insertAdjacentHTML('beforebegin', `<img src="../img/red-among-us-noob.png" alt="Red character noob">`);
+
+  
   //ch name
   let chName = document.getElementById("ch-name");
 

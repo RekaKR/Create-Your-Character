@@ -75,20 +75,10 @@ main .ch-sheet #text {
   bottom: 0;
   left: 0;
 }
-main .ch-sheet #text div:nth-child(1) {
-  color: red;
-  margin-top: 7px;
-}
-main .ch-sheet #text div:nth-child(2) {
-  color: lightblue;
-  margin-top: 7px;
-}
-main .ch-sheet #text div:nth-child(3) {
-  color: #df168b;
-  margin-top: 7px;
-}
+main .ch-sheet #text div:nth-child(1),
+main .ch-sheet #text div:nth-child(2),
+main .ch-sheet #text div:nth-child(3),
 main .ch-sheet #text div:nth-child(4) {
-  color: orange;
   margin-top: 7px;
 }
 main form {
