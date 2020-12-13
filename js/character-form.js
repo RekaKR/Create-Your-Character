@@ -28,14 +28,9 @@ function pageLoad() {
 
   //race
   let raceSelect = document.getElementById("race-select");
-  let raceSelectValue = raceSelect.options[raceSelect.selectedIndex].value;
-  let raceSelectText = raceSelect.options[raceSelect.selectedIndex].text;
 
   function racePrint() {
-    divs[1].insertAdjacentHTML('beforeend', `
-        <p>${raceSelectText}</p>
-        <p>${raceSelectValue}</p>
-      `);
+    divs[1].textContent = raceSelect.value;
   }
 
   raceSelect.addEventListener('change', racePrint);
@@ -43,14 +38,9 @@ function pageLoad() {
 
   //gender
   let genderSelect = document.getElementById("gender-select");
-  let genderSelectValue = genderSelect.options[genderSelect.selectedIndex].value;
-  let genderSelectText = genderSelect.options[genderSelect.selectedIndex].text;
 
   function genderPrint() {
-    divs[2].insertAdjacentHTML('beforeend', `
-      <p>${genderSelectText}</p>
-      <p>${genderSelectValue}</p>
-    `);
+    divs[2].textContent = genderSelect.value;
   }
 
   genderSelect.addEventListener('change', genderPrint);
@@ -58,14 +48,9 @@ function pageLoad() {
 
   //class
   let classSelect = document.getElementById("class-select");
-  let classSelectValue = classSelect.options[classSelect.selectedIndex].value;
-  let classSelectText = classSelect.options[classSelect.selectedIndex].text;
 
   function classPrint() {
-    divs[3].insertAdjacentHTML('beforeend', `
-      <p>${classSelectText}</p>
-      <p>${classSelectValue}</p>
-    `);
+    divs[3].textContent = classSelect.value;
   }
 
   classSelect.addEventListener('change', classPrint);
