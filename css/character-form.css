@@ -68,15 +68,28 @@ main .ch-sheet #text {
   min-width: 600px;
   max-width: 48%;
   height: 25%;
+  color: #fff;
   border-top: 5px solid white;
+  text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
 }
-main .ch-sheet #text p {
-  color: #fff;
+main .ch-sheet #text div:nth-child(1) {
+  color: red;
   margin-top: 7px;
-  text-align: center;
+}
+main .ch-sheet #text div:nth-child(2) {
+  color: blue;
+  margin-top: 7px;
+}
+main .ch-sheet #text div:nth-child(3) {
+  color: green;
+  margin-top: 7px;
+}
+main .ch-sheet #text div:nth-child(4) {
+  color: orange;
+  margin-top: 7px;
 }
 main form {
   min-width: 600px;

@@ -38,16 +38,32 @@ transform: translate(-50%, -30%);
     #text {
       min-width: 600px;
       max-width: 48%;
-      height: 25%;  
+      height: 25%;
+      color: variables.$text-color;
       border-top: variables.$border;
+      text-align: center;
       position: fixed;
       bottom: 0;
       left: 0;
-      
-      p {
-        color: variables.$text-color;
+
+      div:nth-child(1) {
+        color:red;
         margin-top: 7px;
-        text-align: center;
+      }
+      
+      div:nth-child(2) {
+        color:blue;
+        margin-top: 7px;
+      }
+      
+      div:nth-child(3) {
+        color:green;
+        margin-top: 7px;
+      }
+
+      div:nth-child(4) {
+        color:orange;
+        margin-top: 7px;
       }
     }
   }

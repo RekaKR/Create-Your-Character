@@ -2,6 +2,7 @@ function pageLoad () {
   
   //content variable
   let text = document.getElementById("text");
+  let divs = text.querySelectorAll("div");
 
   //ch name variable
   let chName = document.getElementById("ch-name");  
@@ -22,23 +23,17 @@ function pageLoad () {
   let classSelectText = classSelect.options[classSelect.selectedIndex].text;
   
   //submit variable
-  let submit = document.getElementById('submit');
+  //let submit = document.getElementById('submit');
 
 
   //ch name func.
   function showChName() {
-  /*
-    text.insertAdjacentHTML('afterbegin', `
-    <p>${chName.value}</p>
-    `);
-  */
-    text.innerHTML = `<p>${chName.value}</p>`;
-    //text.textContent = chName.value;
+    divs[0].textContent = chName.value;
   }
   
   //race func.
   function racePrint() {
-    text.insertAdjacentHTML('beforeend', `
+    divs[1].insertAdjacentHTML('beforeend', `
       <p>${raceSelectText}</p>
       <p>${raceSelectValue}</p>
     `);
@@ -46,7 +41,7 @@ function pageLoad () {
 
   //gender func.
   function genderPrint() {
-    text.insertAdjacentHTML('beforeend', `
+    divs[2].insertAdjacentHTML('beforeend', `
       <p>${genderSelectText}</p>
       <p>${genderSelectValue}</p>
     `);
@@ -54,7 +49,7 @@ function pageLoad () {
 
   //class func.
   function classPrint() {
-    text.insertAdjacentHTML('beforeend', `
+    divs[3].insertAdjacentHTML('beforeend', `
       <p>${classSelectText}</p>
       <p>${classSelectValue}</p>
     `);
