@@ -68,50 +68,56 @@ function pageLoad() {
   let classes = ['fighter', 'innocent', 'noob'];
   let colorChs = ['Pink character', 'Red character', 'Orange character', 'Yellow character', 'White character'];
 
-  if (raceSelect.value === "") {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[2]}.png" alt="${colorChs[1]} ${classes[2]}">`);
+
+  function reLoad() {
+    if (raceSelect.value === "red") {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[2]}.png" alt="${colorChs[1]} ${classes[2]}">`);
+    }
   }
 
+/*
+  function reLoad() {
+    if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[0]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[0]}.png" alt="${colorChs[0]} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[1]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[1]}.png" alt="${colorChs[0]} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[0]}` && classSelect.value === "" || raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[2]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[2]}.png" alt="${colorChs[0]} ${classes[2]}">`);
+    
+    } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[0]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[0]}.png" alt="${colorChs[1]} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[1]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[1]}.png" alt="${colorChs[1]} ${classes[1]}">`);
 
- /*
-  //NEM MŰKÖDIK MÉG
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[0]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[0]}.png" alt="${colorChs[2]} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[1]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[1]}.png" alt="${colorChs[2]} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === "" || raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[2]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[2]}.png" alt="${colorChs[2]} ${classes[2]}">`);
+    
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[0]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[0]}.png" alt="${colorChs[3]} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[1]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[1]}.png" alt="${colorChs[3]} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === "" || raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[2]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[2]}.png" alt="${colorChs[3]} ${classes[2]}">`);
 
-  if (race === `${colors[0]}` && class. === fighter) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[0]}.png" alt="${colorChs[0]} ${classes[0]}">`);
-  } else if (race === `${colors[0]}` && class. === innocent) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[1]}.png" alt="${colorChs[0]} ${classes[1]}">`);
-  } else if (race === `${colors[0]}` && class. === "" || race === `${colors[0]}` && class. === noob) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[0]}${au}${classes[2]}.png" alt="${colorChs[0]} ${classes[2]}">`);
-  
-  } else if (race === `${colors[1]}` && class. === fighter) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[0]}.png" alt="${colorChs[1]} ${classes[0]}">`);
-  } else if (race === `${colors[1]}` && class. === innocent) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[1]}.png" alt="${colorChs[1]} ${classes[1]}">`);
-
-  } else if (race === `${colors[2]}` && class. === fighter) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[0]}.png" alt="${colorChs[2]} ${classes[0]}">`);
-  } else if (race === `${colors[2]}` && class. === innocent) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[1]}.png" alt="${colorChs[2]} ${classes[1]}">`);
-  } else if (race === `${colors[2]}` && class. === "" || race === `${colors[2]}` && class. === noob) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[2]}${au}${classes[2]}.png" alt="${colorChs[2]} ${classes[2]}">`);
-  
-  } else if (race === `${colors[3]}` && class. === fighter) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[0]}.png" alt="${colorChs[3]} ${classes[0]}">`);
-  } else if (race === `${colors[3]}` && class. === innocent) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[1]}.png" alt="${colorChs[3]} ${classes[1]}">`);
-  } else if (race === `${colors[3]}` && class. === "" || race === `${colors[3]}` && class. === noob) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[3]}${au}${classes[2]}.png" alt="${colorChs[3]} ${classes[2]}">`);
-
-  } else if (race === `${colors[4]}` && class. === fighter) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[0]}.png" alt="${colorChs[4]} ${classes[0]}">`);
-  } else if (race === `${colors[4]}` && class. === innocent) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[1]}.png" alt="${colorChs[4]} ${classes[1]}">`);
-  } else if (race === `${colors[4]}` && class. === "" || race === `${colors[4]}` && class. === noob) {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[2]}.png" alt="${colorChs[4]} ${classes[2]}">`);
-  } else {
-    text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[2]}.png" alt="${colorChs[1]} ${classes[2]}">`);
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[0]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[0]}.png" alt="${colorChs[4]} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[1]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[1]}.png" alt="${colorChs[4]} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === "" || raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[2]}`) {
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[4]}${au}${classes[2]}.png" alt="${colorChs[4]} ${classes[2]}">`);
+    
+    } else {
+      text.textContent = "";
+      text.insertAdjacentHTML('beforebegin', `<img src="../img/${colors[1]}${au}${classes[2]}.png" alt="${colorChs[1]} ${classes[2]}">`);
+    }
   }
 */
+  raceSelect.addEventListener('change', reLoad);
+  classSelect.addEventListener('change', reLoad);
 }
 
 window.addEventListener('load', pageLoad);
