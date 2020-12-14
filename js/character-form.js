@@ -60,68 +60,87 @@ function pageLoad() {
   classSelect.addEventListener('change', classPrint);
 
 
+  //ch img
+  let colors = ['pink', 'red', 'orange', 'yellow', 'white'];
+  let classes = ['fighter', 'innocent', 'noob'];
 
- //ch img
- let colors = ['pink', 'red', 'orange', 'yellow', 'white'];
- let classes = ['fighter', 'innocent', 'noob'];
 
- text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[2]}.png" alt="Red character ${classes[2]}">`);
+  text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[2]}.png" alt="Red character ${classes[2]}">`);
 
- function reLoad() {
-   let imgs = document.querySelectorAll("#img");
+  function reLoad() {
+    let imgs = document.querySelectorAll("#img");
+    let raceIndex = colors.indexOf(raceSelect.value);
+    let classIndex = classes.indexOf(classSelect.value);
+    imgs[0].remove();
+    
+    if (raceIndex === -1) {
+      raceIndex = 0;
+    }
 
-   if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[0]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[0]}.png" alt="Pink character ${classes[0]}">`);
-   } else if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[1]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[1]}.png" alt="Pink character ${classes[1]}">`);
-   } else if (raceSelect.value === `${colors[0]}` && classSelect.value === "" || raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[2]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[2]}.png" alt="Pink character ${classes[2]}">`);
-   
-   } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[0]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[0]}.png" alt="Red character ${classes[0]}">`);
-   } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[1]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[1]}.png" alt="Red character ${classes[1]}">`);
+    if (classIndex === -1) {
+      classIndex = 0;
+    }
 
-   } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[0]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[0]}.png" alt="Orange character ${classes[0]}">`);
-   } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[1]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[1]}.png" alt="Orange character ${classes[1]}">`);
-   } else if (raceSelect.value === `${colors[2]}` && classSelect.value === "" || raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[2]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[2]}.png" alt="Orange character ${classes[2]}">`);
-   
-   } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[0]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[0]}.png" alt="Yellow character} ${classes[0]}">`);
-   } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[1]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[1]}.png" alt="Yellow character} ${classes[1]}">`);
-   } else if (raceSelect.value === `${colors[3]}` && classSelect.value === "" || raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[2]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[2]}.png" alt="Yellow character} ${classes[2]}">`);
+    text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[raceIndex]}-among-us-${classes[classIndex]}.png"> alt="character-image`);
+  }
 
-   } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[0]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[0]}.png" alt="White character} ${classes[0]}">`);
-   } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[1]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[1]}.png" alt="White character} ${classes[1]}">`);
-   } else if (raceSelect.value === `${colors[4]}` && classSelect.value === "" || raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[2]}`) {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[2]}.png" alt="White character} ${classes[2]}">`);
-   
-   } else {
-     imgs[0].remove();
-     text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[2]}.png" alt="Red character ${classes[2]}">`);
-   }
- }
+/*
+  function reLoad() {
+    let imgs = document.querySelectorAll("#img");
+
+    if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[0]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[0]}.png" alt="Pink character ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[1]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[1]}.png" alt="Pink character ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[0]}` && classSelect.value === "" || raceSelect.value === `${colors[0]}` && classSelect.value === `${classes[2]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[0]}-among-us-${classes[2]}.png" alt="Pink character ${classes[2]}">`);
+    
+    } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[0]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[0]}.png" alt="Red character ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[1]}` && classSelect.value === `${classes[1]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[1]}.png" alt="Red character ${classes[1]}">`);
+
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[0]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[0]}.png" alt="Orange character ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[1]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[1]}.png" alt="Orange character ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[2]}` && classSelect.value === "" || raceSelect.value === `${colors[2]}` && classSelect.value === `${classes[2]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[2]}-among-us-${classes[2]}.png" alt="Orange character ${classes[2]}">`);
+    
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[0]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[0]}.png" alt="Yellow character} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[1]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[1]}.png" alt="Yellow character} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[3]}` && classSelect.value === "" || raceSelect.value === `${colors[3]}` && classSelect.value === `${classes[2]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[3]}-among-us-${classes[2]}.png" alt="Yellow character} ${classes[2]}">`);
+
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[0]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[0]}.png" alt="White character} ${classes[0]}">`);
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[1]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[1]}.png" alt="White character} ${classes[1]}">`);
+    } else if (raceSelect.value === `${colors[4]}` && classSelect.value === "" || raceSelect.value === `${colors[4]}` && classSelect.value === `${classes[2]}`) {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[4]}-among-us-${classes[2]}.png" alt="White character} ${classes[2]}">`);
+    
+    } else {
+      imgs[0].remove();
+      text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[2]}.png" alt="Red character ${classes[2]}">`);
+    }
+  }
+*/
 
  raceSelect.addEventListener('change', reLoad);
  classSelect.addEventListener('change', reLoad);
