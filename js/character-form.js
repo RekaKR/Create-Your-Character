@@ -64,7 +64,6 @@ function pageLoad() {
   let colors = ['pink', 'red', 'orange', 'yellow', 'white'];
   let classes = ['fighter', 'innocent', 'noob'];
 
-
   text.insertAdjacentHTML('beforebegin', `<img id="img" src="../img/${colors[1]}-among-us-${classes[2]}.png" alt="Red character ${classes[2]}">`);
 
   function reLoad() {
