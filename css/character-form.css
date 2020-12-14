@@ -59,7 +59,7 @@ main .ch-sheet {
   border: 5px solid white;
   border-radius: 20px;
 }
-main .ch-sheet img {
+main .ch-sheet #img {
   width: 300px;
   display: block;
   margin: 0 auto;
